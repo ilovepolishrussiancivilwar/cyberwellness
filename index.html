@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Password Safety</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Password Checker Toggle Button -->
+  <div class="top-right-button">
+    <button onclick="togglePasswordChecker()">Check Your Password</button>
+  </div>
+
+  <!-- Password Strength Checker -->
+  <div id="password-checker" class="password-checker hidden">
+    <h2>Password Strength Checker</h2>
+    <input type="password" id="password-input" placeholder="Enter your password" oninput="checkStrength()" />
+    <p id="strength-result"></p>
+  </div>
+
+  <header>
+    <h1>Password Safety Tips</h1>
+    <p>Learn how to stay safe online and take the quiz!</p>
+  </header>
+
+  <main>
+    <section id="tips">
+      <h2>Why Strong Passwords Matter</h2>
+      <ul>
+        <li>Use at least 12 characters</li>
+        <li>Mix of letters, numbers, and symbols</li>
+        <li>Never reuse passwords</li>
+        <li>Enable 2FA when possible</li>
+      </ul>
+    </section>
+
+    <section id="quiz">
+      <h2>Take the Quiz</h2>
+      <div id="quiz-container"></div>
+      <button onclick="submitQuiz()">Submit Answers</button>
+      <p id="result"></p>
+    </section>
+  </main>
+
+  <script src="quiz.js"></script>
+</body>
+</html>
